@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dw21j68s2sgoh"]
+
+[ext_resource type="Script" uid="uid://ccafqk3c6pqun" path="res://timer_screen.gd" id="1_7m365"]
+[ext_resource type="Texture2D" uid="uid://bgv7g07fk0ni7" path="res://backgound.jpg" id="2_5nl2g"]
+[ext_resource type="Texture2D" uid="uid://c0q2v4gcsg2e5" path="res://icon.svg" id="3_mne6x"]
+
+[node name="Node2D" type="Node2D" unique_id=1247990015]
+script = ExtResource("1_7m365")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=201042651]
+offset_top = -2.0
+offset_right = 1154.0
+offset_bottom = 637.0
+texture = ExtResource("2_5nl2g")
+
+[node name="Lives_Container" type="HBoxContainer" parent="." unique_id=1152177815]
+offset_left = 8.0
+offset_top = 6.0
+offset_right = 136.0
+offset_bottom = 134.0
+
+[node name="Hearts" type="TextureRect" parent="Lives_Container" unique_id=351957628]
+layout_mode = 2
+texture = ExtResource("3_mne6x")
+
+[node name="Level" type="RichTextLabel" parent="." unique_id=641569577]
+offset_left = 922.0
+offset_top = 16.0
+offset_right = 1120.0
+offset_bottom = 78.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.85540605, 0.054777876, 0.2233533, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/normal_font_size = 40
+text = "L3v4l 1ne"
+
+[node name="Timer" type="RichTextLabel" parent="." unique_id=458836705]
+offset_left = 155.0
+offset_top = 10.0
+offset_right = 395.0
+offset_bottom = 73.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.95445794, 3.6098063e-06, 1.347661e-06, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/normal_font_size = 40
+text = "0.000000000"
