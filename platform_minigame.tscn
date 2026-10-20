@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://cadulnj6vpsfy"]
+
+[ext_resource type="Texture2D" uid="uid://bgv7g07fk0ni7" path="res://backgound.jpg" id="1_72jc6"]
+[ext_resource type="PackedScene" uid="uid://dmrbtyy6jf67c" path="res://player.tscn" id="2_bgjtv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8hv0o"]
+size = Vector2(1149.5, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1say2"]
+size = Vector2(0.19859454, 0.04887496)
+
+[node name="Node2D" type="Node2D" unique_id=988451481]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1163143537]
+repeat_size = Vector2(1000, 0)
+autoscroll = Vector2(100, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Parallax2D" unique_id=569373593]
+offset_right = 1151.0
+offset_bottom = 639.0
+texture = ExtResource("1_72jc6")
+
+[node name="platform_1" type="StaticBody2D" parent="." unique_id=1441619242]
+position = Vector2(21, 630)
+
+[node name="Control" type="Control" parent="platform_1" unique_id=1827189125]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -21.0
+offset_top = -630.0
+offset_right = 19.0
+offset_bottom = -590.0
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="platform_1/Control" unique_id=1970982028]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.05
+anchor_top = -0.075
+anchor_right = 27.71167
+anchor_bottom = -0.075
+offset_left = 1.0
+offset_top = 609.0
+offset_right = 41.0
+offset_bottom = 649.0
+rotation = -6.2831855
+color = Color(0, 1, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform_1" unique_id=1523795403]
+position = Vector2(554.25, -4)
+shape = SubResource("RectangleShape2D_8hv0o")
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1108544552]
+rotation = 1.575039
+scroll_offset = Vector2(477, 89)
+autoscroll = Vector2(0, 85)
+
+[node name="platform_2" type="StaticBody2D" parent="Parallax2D2" unique_id=1392617809]
+
+[node name="Control" type="Control" parent="Parallax2D2/platform_2" unique_id=1547142663]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -21.0
+offset_top = -630.0
+offset_right = 19.0
+offset_bottom = -590.0
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Parallax2D2/platform_2/Control" unique_id=1830964775]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.825
+anchor_top = 1.925
+anchor_right = 4.441018
+anchor_bottom = 1.925
+offset_left = 1.0
+offset_top = 609.0
+offset_right = 41.0
+offset_bottom = 649.0
+rotation = -6.2831855
+color = Color(0, 1, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parallax2D2/platform_2" unique_id=136746211]
+position = Vector2(52.59413, 75.6741)
+scale = Vector2(1464.3491, -805.07874)
+shape = SubResource("RectangleShape2D_1say2")
+debug_color = Color(1, 0.22000003, 0.2329998, 0.41960785)
+
+[node name="Player" parent="." unique_id=1421882370 instance=ExtResource("2_bgjtv")]
+position = Vector2(86, 523)
